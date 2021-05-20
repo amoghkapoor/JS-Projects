@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Clock</title>
+		<link rel="stylesheet" href="stylesheet.css" />
+	</head>
+	<body>
+		<main>
+			<div class="clock">
+				<div class="analogClock">
+					<div class="centre"></div>
+					<div id="secondHand" class="hand"></div>
+					<div id="minuteHand" class="hand"></div>
+					<div id="hourHand" class="hand"></div>
+					<div class="number" id="number1">1</div>
+					<div class="number" id="number2">2</div>
+					<div class="number" id="number3">3</div>
+					<div class="number" id="number4">4</div>
+					<div class="number" id="number5">5</div>
+					<div class="number" id="number6">6</div>
+					<div class="number" id="number7">7</div>
+					<div class="number" id="number8">8</div>
+					<div class="number" id="number9">9</div>
+					<div class="number" id="number10">10</div>
+					<div class="number" id="number11">11</div>
+					<div class="number" id="number12">12</div>
+				</div>
+
+				<div class="container">
+					<div class="digitalClock" id="twentyfourHourClock"></div>
+					<div class="digitalClock" id="twelveHourClock"></div>
+
+					<div id="date"></div>
+				</div>
+
+				<div class="button">
+					<button id="twelve-hour" onclick="hide24()">12 Hour</button>
+
+					<button id="twentyfour-hour" onclick="show24()">24 Hour</button>
+				</div>
+			</div>
+		</main>
+		<script src="clock.js"></script>
+	</body>
+</html>
