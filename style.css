@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Cairo;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: #eee;
+}
+
+#header {
+	padding: 0.2em 2em;
+	background-color: #78c6a3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-size: 70px;
+}
+
+.box {
+	margin: 70px 125px;
+	border: 1.5px solid #a9a9a9;
+	padding: 50px 50px;
+}
+
+#filter {
+	padding: 0.3em 1em;
+	font-size: 1em;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 10px;
+	width: 300px;
+}
+
+#form {
+	margin-bottom: 3rem;
+}
+
+#textbox {
+	padding: 0.3em 1em;
+	font-size: 1em;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 10px;
+	width: 25%;
+}
+
+#submit {
+	padding: 0.3em 1em;
+	font-size: 1em;
+	margin-left: 1em;
+	background-color: #413d3d;
+	color: aliceblue;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.list-group-item {
+	border: 1px solid black;
+	list-style: decimal;
+	padding: 10px 25px;
+	font-size: 1.3em;
+	margin-top: -1px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading {
+	font-weight: normal;
+	font-size: 3em;
+}
+
+.close {
+	background-color: tomato;
+	border: 1px solid black;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
