@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+* {
+	font-size: 1rem;
+	font-family: Cairo, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f4f4f4;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+}
+
+.filter {
+	font-size: 1.5rem;
+	width: 80%;
+	background-color: inherit;
+	border: none;
+	border-bottom: 1.5px solid #778899;
+	outline: none;
+}
+
+#main {
+	height: auto;
+	border: 1.5px solid #778899;
+	margin: 3rem 10%;
+}
+
+li {
+	list-style: none;
+}
+
+.letter {
+	border-top: 1.5px solid #778899;
+	font-size: 3rem;
+	padding-left: 3rem;
+}
+
+.letter:first-of-type {
+	border-top: 0;
+}
+
+.names {
+	border-top: 1px solid #778899;
+	padding-left: 5rem;
+	font-size: 1.5rem;
+}
