@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins;
+}
+
+#navbar {
+	background-color: #333;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	color: #fff;
+	margin-left: 2rem;
+	font-size: 3.5rem;
+}
+
+#list {
+	display: flex;
+	margin-right: 3rem;
+	font-size: 1.2rem;
+}
+
+.links {
+	list-style: none;
+}
+
+#list a {
+	padding: 1rem;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+
+#list a:hover {
+	color: lightskyblue;
+}
+
+.hamburger {
+	position: absolute;
+	right: 1rem;
+	top: 1.5rem;
+	display: none;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.fa-bars {
+	font-size: 2rem;
+	color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+	.hamburger {
+		display: flex;
+	}
+
+	#navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	#list {
+		display: none;
+		flex-direction: column;
+	}
+
+	#list a {
+		width: 100vw;
+		text-align: center;
+		padding: 0.5rem 1rem;
+	}
+
+	#list.toggle {
+		display: flex;
+	}
+}
