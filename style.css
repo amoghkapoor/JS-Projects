@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(60deg, #09203f 0%, #537895 100%);
+	background-repeat: no-repeat;
+	background: cover;
+	font-family: Poppins;
+	color: #000;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	color: #fff;
+	font-size: 3rem;
+}
+
+.icon {
+	color: #fff;
+	margin-right: 3rem;
+	font-size: 3rem;
+}
+
+.heading,
+.form {
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form .text,
+.form .submit {
+	outline: none;
+	border: 0;
+	padding: 0.5rem;
+	background-color: #fff;
+	font-size: 1.5rem;
+}
+
+.form .text {
+	width: 35vw;
+}
+
+.form .submit {
+	cursor: pointer;
+	color: #09203f;
+	background: #fff;
+	transition: all 0.3s ease;
+}
+
+.form .submit:hover {
+	background: #09203f;
+	color: #fff;
+}
+
+button:focus {
+	outline: none;
+}
+
+.todo-container {
+	min-width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list {
+	min-width: 30%;
+	list-style: none;
+}
+
+.todo {
+	padding-left: 0.5rem;
+	font-size: 1.5rem;
+	margin: 0.5rem;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.todo-delete,
+.todo-complete {
+	background-color: #09203f;
+	color: #fff;
+	border: none;
+	padding: 1rem;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.todo-complete {
+	margin-left: 0.5rem;
+	background-color: #49cc49;
+}
+
+.todo-complete:hover {
+	background-color: #43ad43;
+}
+
+.todo-delete {
+	background-color: #eb3333;
+}
+
+.todo-delete:hover {
+	background-color: #c02929;
+}
+
+.fa-trash,
+.fa-check {
+	pointer-events: none;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.select {
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 10rem;
+	height: auto;
+}
+
+.option {
+	color: #09203f;
+	padding: 0.8rem;
+	min-height: auto;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+	/* order: 2; */
+	z-index: 1;
+	transition: background 0.4s ease-in-out;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.option:hover {
+	color: #fff;
+	background: #09203f;
+}
+
+.select:focus .option {
+	position: relative;
+	pointer-events: all;
+}
+
+.selectopt {
+	opacity: 0;
+	position: absolute;
+	left: -99999px;
+}
+
+.selectopt:checked + label {
+	/* order: 1; */
+	z-index: 2;
+	background: #fff;
+	color: #09203f;
+	border-top: none;
+	position: relative;
+}
+
+.selectopt:checked + label:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #09203f;
+	position: absolute;
+	right: 10px;
+	top: calc(50% - 2.5px);
+	pointer-events: none;
+	z-index: 3;
+}
+
+.selectopt:checked:hover + label:after:hover {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #fff;
+}
+
+.selectopt:checked + label:before {
+	position: absolute;
+	/* right: 0; */
+	height: auto;
+	width: 10rem;
+	content: "";
+	background: #fff;
+}
+
+.selectopt:checked:hover + label:before:hover {
+	background: #09203f;
+	color: #fff;
+}

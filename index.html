@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TODO</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<header class="heading">
+				<i class="fas fa-clipboard-list icon"></i> TODO List
+			</header>
+
+			<form class="form" autocomplete="off">
+				<input
+					type="text"
+					id="todo-input"
+					placeholder="Enter item to add"
+					class="text"
+				/>
+				<button id="todo-submit" type="submit" class="submit">
+					<i class="fas fa-plus-square"></i>
+				</button>
+				<div class="select" tabindex="1">
+					<input class="selectopt" name="test" type="radio" id="opt1" checked />
+					<label for="opt1" class="option">All</label>
+					<input class="selectopt" name="test" type="radio" id="opt2" />
+					<label for="opt2" class="option">Completed</label>
+					<input class="selectopt" name="test" type="radio" id="opt3" />
+					<label for="opt3" class="option">Uncompleted</label>
+				</div>
+			</form>
+
+			<div class="todo-container">
+				<ul class="todo-list"></ul>
+			</div>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
