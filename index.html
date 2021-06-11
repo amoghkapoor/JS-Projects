@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+			integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="main">
+			<div class="button">
+				<button data-modal-target="#modal" id="openBtn">Click Me!</button>
+			</div>
+			<div id="modal" class="modal">
+				<div class="modal-header">
+					<div class="modal-title">Modal Title</div>
+					<div class="modal-close-btn">
+						<button data-modal-close-button id="closeBtn">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="modal-content">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt qui
+					magnam ad! In ex perferendis laborum, sunt tempora magni illum
+					doloremque dolor possimus maiores sapiente nobis dolorem laudantium?
+					Asperiores molestiae facere blanditiis dolor aut cum voluptatum
+					possimus, architecto in doloribus delectus repudiandae explicabo
+					accusamus natus molestias nihil iure dignissimos! Omnis.
+				</div>
+			</div>
+			<div id="overlay"></div>
+		</main>
+
+		<script src="main.js"></script>
+	</body>
+</html>
