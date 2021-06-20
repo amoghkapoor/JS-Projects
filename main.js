@@ -4,6 +4,7 @@ let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 var todoInput = document.getElementById("todo-input")
 var submitBtn = document.getElementById("todo-submit")
 var todoList = document.querySelector(".todo-list")
+var options = document.querySelectorAll(".selectopt")
 
 document.addEventListener("DOMContentLoaded", getTodos)
 submitBtn.addEventListener("click", addTodoList)
@@ -119,4 +120,36 @@ function removeLocalTodo(todo) {
     var todoIndex = Array.from(todoList.childNodes).indexOf(todo);
     lists.splice(todoIndex, 1);
     save()
+}
+
+options.forEach(element => {
+    element.addEventListener("click", filterItems)
+})
+
+function filterItems(e) {
+    var todos = todoList.childNodes
+    todos.forEach(element => {
+        var option = e.target.value
+        switch (option) {
+            case "All":
+                element.style.display = "flex"
+                break
+            case "Completed":
+                if (element.classList.contains("completed")) {
+                    element.style.display = "flex"
+                }
+                else {
+                    element.style.display = "none"
+                }
+                break
+            case "Uncompleted":
+                if (element.classList.contains("completed")) {
+                    element.style.display = "none"
+                }
+                else {
+                    element.style.display = "flex"
+                }
+                break
+        }
+    })
 }
