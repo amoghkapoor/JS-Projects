@@ -1,0 +1,100 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(219, 225, 230);
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+	width: 100vw;
+	padding: 3rem;
+	text-align: center;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+	gap: 2rem;
+	padding: 3rem 0;
+}
+
+.image {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.image img {
+	border-radius: 0.5rem;
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	width: 100%;
+	text-align: justify;
+	background-color: #fff;
+	line-height: 1.5;
+	margin-bottom: 0.5rem;
+	padding: 1rem 1rem 2.5rem 1rem;
+	display: none;
+	border-radius: 0 0 0.5rem 0.5rem;
+	font-family: sans-serif;
+	transition: all 0.2s ease;
+}
+
+.content.active {
+	display: block;
+}
+
+.content h4 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.btns button {
+	font-size: 1.25rem;
+	padding: 1rem 0.5rem;
+	outline: 0;
+	border: 0;
+	margin: 0;
+	flex: 1;
+	background-color: #ccc;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.btns button.active {
+	background-color: #fff;
+}
+
+.btns button:hover:not(.active) {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btns {
+	border-radius: 0.5rem 0.5rem 0 0;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.btns button:first-child {
+	border-radius: 0.5rem 0 0 0;
+}
+
+.btns button:last-child {
+	border-radius: 0 0.5rem 0 0;
+}
